@@ -1,0 +1,118 @@
+body {
+    display: flex;
+    /* justify-content: center;  jangan dihidupin ya dek yaa*/
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-image: url('/images/bg-main-all.gif');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+h1, h3 {
+    color: #1E2A5E;
+    margin: 20px;
+}
+
+h3 {
+    font-size: 18px;
+    text-align: left;
+}
+
+h3 a {
+    color: #80deea;
+    text-decoration: none;
+}
+
+h3 a:hover {
+    text-decoration: underline;
+}
+
+.body-detail {
+    padding: 20px;
+    text-align: left;
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.4); /* White background with transparency */
+    border-radius: 10px;
+    color: #1E2A5E; /* Change text color to black for better contrast */
+}
+
+.body-detail img{
+    place-self: center;
+}
+
+p {
+    font-size: 18px;
+    margin: 20px 0;
+    color: #1E2A5E; /* Change text color to black */
+}
+
+p a {
+    text-decoration: underline;
+    color: #1E2A5E; /* Darker blue link color */
+    font-weight: bold;
+}
+
+article a {
+    text-decoration: underline;
+    color: #1E2A5E; /* Darker blue link color */
+    font-weight: bold;
+}
+
+footer {
+    color: #e0f7fa;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* background-color: rgba(255, 255, 255, 0.4); White background with transparency */
+    /* border-top: 1px solid #ffffff; */
+    color: #1E2A5E; /* Change text color to black */
+}
+
+footer a {
+    color: #007bff; /* Darker blue link color */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1E2A5E; /* Darker blue link color */
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #55679C; /* Darker hover color */
+}
+
+.nav-menu {
+    width: fit-content;
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.4); /* White background with transparency */
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    color: #1E2A5E; /* Change text color to black */
+}
