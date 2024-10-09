@@ -6,6 +6,10 @@
     }
 </style>
 <div class="relative w-full">
+    <!-- Logo -->
+    <div class="absolute top-4 left-4">
+        <img src="{{ asset('images/main-logo-nav.png') }}" alt="Logo" class="h-10 mix-blend-multiply">
+    </div>
     <!-- Navbar -->
     <nav class="nav-menu bg-white/30 backdrop-blur-sm rounded-3xl p-4 text-center mx-auto w-max mb-4">
         <ul class="list-none p-0 flex justify-center">
