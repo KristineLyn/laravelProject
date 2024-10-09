@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{-- ini biar bisa kena value title dari web.php (yang di bawah ini ygy) --}}
-    <title>{{ $title ?? 'K Web' }}</title>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
-    rel="stylesheet">
-</head>
-<body class="flex flex-col items-center min-h-screen bg-cover bg-center text-white w-full h-full mt-3 p-0"
-      style="background-image: url('{{ asset('images/bg-main-all.gif') }}');">
-        {{-- lah ini apa yaa yang di bawah???
-        ini komponen, cara ngeditnya masuk ke views/components disitu ada navbar. --}}
-    <x-layout>
-        <h3> Ini tampilannya</h3>
-    </x-layout>
+<x-header :title="$title"/>
+<body class="flex flex-col items-center min-h-screen bg-cover bg-center text-white w-full h-full mt-3 p-0">
+    {{-- lah ini apa yaa yang di bawah???
+    ini komponen, cara ngeditnya masuk ke views/components disitu ada navbar. --}}
+    <x-navbar class="w-full "/>
 
+    <div class="body-detail bg-white/40 text-blue-900 p-6 rounded-lg backdrop-blur-md m-6">
+        <h1 class="font-inter text-3xl text-center mb-6 font-bold">Blog dan Proyek Saya</h1>
+        @foreach ($posts as $post)
+        <article class="mb-8">
+            <h3 class="font-inter text-lg font-semibold mb-2">{{ $post['judul'] }}</h3>
+            <h3 class="font-inter text-lg font-semibold mb-2">{{ $post['author'] }}</h3>
+            <p class="font-roboto font-light text-base mb-4">{{ Str::limit($post['body'], 100) }} </p>
+            <a href="/blog/{{ $post['id'] }}" class="font-roboto text-sky-200 hover:underline font-bold">Baca Selengkapnya</a>
+        </article>
+        @endforeach
+    </div>
 </body>
-
+<x-footer/>
 </html>
+    

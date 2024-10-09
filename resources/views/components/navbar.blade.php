@@ -1,3 +1,10 @@
+<style>
+    body {
+        background-image: url('/images/bg-main-all.gif');
+        background-size: cover;
+        background-position: center;
+    }
+</style>
 <div class="relative w-full">
     <!-- Navbar -->
     <nav class="nav-menu bg-white/30 backdrop-blur-sm rounded-3xl p-4 text-center mx-auto w-max mb-4">
