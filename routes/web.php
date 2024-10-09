@@ -81,7 +81,7 @@ Route::get('/blog/{id}', function ($id) {
         abort(404);
     }
     
-    return view('article', [
+    return view('/article', [
         'title' => 'Article',
         'post' => $post
     ]);
