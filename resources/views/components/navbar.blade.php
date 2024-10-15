@@ -11,29 +11,33 @@
         <img src="{{ asset('images/main-logo-nav.png') }}" alt="Logo" class="h-10 mix-blend-multiply">
     </div>
     <!-- Navbar -->
-    <nav class="nav-menu bg-white/30 backdrop-blur-sm rounded-3xl p-4 text-center mx-auto w-max mt-2">
+    <nav class="nav-menu bg-white/30 backdrop-blur-sm rounded-3xl p-4 text-center mx-auto w-max mb-4">
         <ul class="list-none p-0 flex justify-center">
             <li class="inline-block mr-5">
                 <a href="{{ url('/') }}"
-                   class="{{ request()->is('/') ? 'bg-blue-900 text-white' : 'text-blue-900' }} font-bold hover:text-blue-700 rounded-full px-4 py-2">
+                   class="{{ request()->is('/') ? 'bg-blue-900 text-white' : 'text-blue-900' }} 
+                   font-bold hover:text-blue-700 rounded-full px-4 py-2">
                     Home
                 </a>
             </li>
             <li class="inline-block mr-5">
                 <a href="{{ url('/profile') }}"
-                   class="{{ request()->is('profile') ? 'bg-blue-900 text-white' : 'text-blue-900' }} font-bold hover:text-blue-700 rounded-full px-4 py-2">
+                   class="{{ request()->is('profile') ? 'bg-blue-900 text-white' : 'text-blue-900' }} 
+                   font-bold hover:text-blue-700 rounded-full px-4 py-2">
                     Profile
                 </a>
             </li>
             <li class="inline-block mr-5">
                 <a href="{{ url('/blog') }}"
-                   class="{{ request()->is('blog') ? 'bg-blue-900 text-white' : 'text-blue-900' }} font-bold hover:text-blue-700 rounded-full px-4 py-2">
+                   class="{{ request()->is('blog') ? 'bg-blue-900 text-white' : 'text-blue-900' }} 
+                   font-bold hover:text-blue-700 rounded-full px-4 py-2">
                     Blog
                 </a>
             </li>
             <li class="inline-block">
                 <a href="{{ url('/about') }}"
-                   class="{{ request()->is('about') ? 'bg-blue-900 text-white' : 'text-blue-900' }} font-bold hover:text-blue-700 rounded-full px-4 py-2">
+                   class="{{ request()->is('about') ? 'bg-blue-900 text-white' : 'text-blue-900' }} 
+                   font-bold hover:text-blue-700 rounded-full px-4 py-2">
                     About
                 </a>
             </li>
@@ -41,7 +45,7 @@
     </nav>
 
     <!-- Profile Dropdown -->
-    <div x-data="{ open: false }" class="absolute top-2 right-4">
+    <div x-data="{ open: false }" class="absolute top-4 right-4">
         <div>
             <button @click="open = ! open"
                     type="button"
