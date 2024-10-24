@@ -35,6 +35,13 @@
                 </a>
             </li>
             <li class="inline-block">
+                <a href="{{ url('/project') }}"
+                   class="{{ request()->is('project') ? 'bg-blue-900 text-white' : 'text-blue-900' }} 
+                   font-bold hover:text-blue-700 rounded-full px-4 py-2">
+                    Project
+                </a>
+            </li>
+            <li class="inline-block">
                 <a href="{{ url('/about') }}"
                    class="{{ request()->is('about') ? 'bg-blue-900 text-white' : 'text-blue-900' }} 
                    font-bold hover:text-blue-700 rounded-full px-4 py-2">

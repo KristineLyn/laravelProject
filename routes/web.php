@@ -27,6 +27,18 @@ Route::get('/profile', function () {
     return view('profile', ['title' => 'Profile']);
 });
 
+Route::get('/project', function () {
+    return view('project', [
+        'title' => 'My Project'
+    ]);
+});
+
+Route::get('/scatterplot', function () {
+    return view('scatterplot', [
+        'title' => 'Data Visualization'
+    ]);
+});
+
 Route::get('/blog', function () {
     return view('blog', [
         'title' => 'Blog',

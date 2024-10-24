@@ -7,7 +7,7 @@
     <x-navbar class="w-full "/>
 
     <div class="body-detail bg-white/40 text-blue-900 p-6 rounded-lg backdrop-blur-md m-6">
-        <h1 class="font-inter text-3xl text-center mb-6 font-bold">Blog dan Proyek Saya</h1>
+        <h1 class="font-inter text-3xl text-center mb-6 font-bold">Blog</h1>
         @foreach ($posts as $post)
         <article class="mb-8">
             <h2 class="font-inter text-lg font-semibold mb-2">{{ $post['judul'] }}</h2>
