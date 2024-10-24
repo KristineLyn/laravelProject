@@ -45,6 +45,12 @@ Route::get('/heatmap', function () {
     ]);
 });
 
+Route::get('/choropleth', function () {
+    return view('choropleth', [
+        'title' => 'Data Visualization'
+    ]);
+});
+
 Route::get('/blog', function () {
     return view('blog', [
         'title' => 'Blog',
