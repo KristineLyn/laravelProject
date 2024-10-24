@@ -39,6 +39,12 @@ Route::get('/scatterplot', function () {
     ]);
 });
 
+Route::get('/heatmap', function () {
+    return view('heatmap', [
+        'title' => 'Data Visualization'
+    ]);
+});
+
 Route::get('/blog', function () {
     return view('blog', [
         'title' => 'Blog',

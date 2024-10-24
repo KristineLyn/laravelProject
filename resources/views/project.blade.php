@@ -13,6 +13,12 @@
                     Scatterplot
                 </a>
             </li>
+            <li class="inline-block mr-5">
+                <a href="{{ url('/heatmap') }}"
+                   class="bg-blue-900 text-white font-bold hover:text-blue-700 hover:bg-whitw-700 rounded-full px-4 py-2">
+                    Heatmap
+                </a>
+            </li>
         </ul>
     </div>
 </body>
