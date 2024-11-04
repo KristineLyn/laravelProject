@@ -3,6 +3,7 @@
         background-image: url('/images/bg-main-all.gif');
         background-size: cover;
         background-position: center;
+        background-attachment: fixed;
     }
 </style>
 <div class="relative w-full">

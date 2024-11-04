@@ -11,7 +11,7 @@
         @foreach ($posts as $post)
         <article class="mb-8">
             <h2 class="font-inter text-lg font-semibold mb-2">{{ $post['judul'] }}</h2>
-            <h3 class="font-inter text-lg font-semibold mb-2">{{ $post['author'] }}</h3>
+            <h3 class="font-inter text-lg font-semibold mb-2">{{ $post -> author -> name }}</h3>
             <p class="font-roboto font-light text-base mb-4">{{ Str::limit($post['body'], 100) }} </p>
             <a href="/blog/{{ $post['id'] }}" class="font-roboto text-sky-200 hover:underline font-bold">Baca Selengkapnya</a>
         </article>
