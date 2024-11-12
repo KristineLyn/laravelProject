@@ -51,6 +51,12 @@ Route::get('/choropleth', function () {
     ]);
 });
 
+Route::get('/treemap', function () {
+    return view('treemap', [
+        'title' => 'Data Visualization'
+    ]);
+});
+
 Route::get('/blog', function () {
     return view('blog', [
         'title' => 'Blog',

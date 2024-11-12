@@ -25,6 +25,12 @@
                     Choropleth
                 </a>
             </li>
+            <li class="inline-block mr-5">
+                <a href="{{ url('/treemap') }}"
+                   class="bg-blue-900 text-white font-bold hover:text-blue-700 hover:bg-whitw-700 rounded-full px-4 py-2">
+                    Treemap
+                </a>
+            </li>
         </ul>
     </div>
 </body>
