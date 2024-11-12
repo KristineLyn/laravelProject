@@ -58,9 +58,10 @@ Route::get('/treemap', function () {
 });
 
 Route::get('/blog', function () {
+    $posts = Post::paginate(3);
     return view('blog', [
         'title' => 'Blog',
-        'posts' => Post::all()
+        'posts' => $posts
     ]);
 });
 

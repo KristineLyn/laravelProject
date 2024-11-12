@@ -17,6 +17,10 @@
         </article>
         @endforeach
     </div>
+
+    <div class="pagination mt-4 flex justify-center">
+        {{ $posts->links('vendor.pagination.default') }}
+    </div>
 </body>
 <x-footer/>
 </html>
