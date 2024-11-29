@@ -9,7 +9,7 @@
             <h2 class="font-inter text-lg font-semibold mb-2">{{ $post['judul'] }}</h2>
             <h3 class="font-inter text-lg font-semibold mb-2">{{ $post -> author -> name }}</h3>
             <p class="font-roboto font-light text-base mb-4">{{ $post['body'] }}</p>
-            <a href="/blog" class="font-roboto text-sky-200 hover:underline font-bold">Back</a>
+            <a href="{{ route('blog.index') }}" class="font-roboto text-sky-200 hover:underline font-bold">Back</a>
         </article>
     </div>
 </body>

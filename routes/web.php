@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Arr;
-use App\Models\Post;
+// use Illuminate\Support\Arr;
+// use App\Models\Post;
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,15 +18,21 @@ use App\Models\Post;
 */
 
 Route::get('/', function () {
-    return view('home', ['title' => 'Home']);
+    return view('home', [
+        'title' => 'Home'
+    ]);
 });
 
 Route::get('/about', function (){
-    return view('about', ['title' => 'About']);
+    return view('about', [
+        'title' => 'About'
+    ]);
 });
 
-Route::get('/profile', function () {
-    return view('profile', ['title' => 'Profile']);
+Route::get('/resume', function () {
+    return view('resume', [
+        'title' => 'Resume'
+    ]);
 });
 
 Route::get('/project', function () {
@@ -57,29 +65,20 @@ Route::get('/treemap', function () {
     ]);
 });
 
-Route::get('/blog', function () {
-    $posts = Post::paginate(3);
-    return view('blog', [
-        'title' => 'Blog',
-        'posts' => $posts
-    ]);
+Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/blog/create', [BlogController::class, 'create'])->middleware('auth')->name('blog.create');
+Route::post('/blog', [BlogController::class, 'store'])->middleware('auth')->name('blog.store');
+Route::get('/blog/{id}', [BlogController::class, 'show'])->name('blog.show');
+
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/test', function () {
-    return view('welcome', [
-        'title' => 'Test Enviro'
-    ]);
-});
-
-Route::get('/blog/{id}', function ($id) {
-    $post = Post::find($id);
-    
-    if (!$post) {
-        abort(404);
-    }
-    
-    return view('/article', [
-        'title' => 'Article',
-        'post' => $post
-    ]);
-});
+require __DIR__.'/auth.php';
